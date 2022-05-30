@@ -11,6 +11,5 @@ app.use('/',mainRutas);
 
 app.set('views', path.join(__dirname,'views'))
 app.set('view engine', 'ejs')
-app.listen(port || process.env.PORT, () => {
-    console.log(`Estamo activo ${port}`)
-  });
+const PORT = process.env.PORT || port;
+app.listen(PORT);
